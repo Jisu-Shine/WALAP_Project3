@@ -1,7 +1,7 @@
 package org.example;
 
-import controller.BookController;
-import view.BookView;
+import org.example.controller.BookController;
+import org.example.view.BookView;
 
 import java.util.Scanner;
 

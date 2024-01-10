@@ -1,8 +1,7 @@
-package model;
-
-import java.util.Date;
+package org.example.model;
 
 public class BookModel {
+//    private int bid;
     private String title;
     private String author;
     private String startDate;
@@ -13,6 +12,7 @@ public class BookModel {
 
     // 생성자
     public BookModel(String title, String author, String startDate, int totalPages) {
+
         this.title = title;
         this.author = author;
         this.startDate = startDate;
@@ -78,16 +78,4 @@ public class BookModel {
         this.progress = progress;
     }
 
-    @Override
-    public String toString() {
-        return
-                "제목: " + title + '\'' +
-                "저자: " + author + '\'' +
-                "독서 시작 날짜: " + startDate +
-                "마지막 독서 날짜: " + lastReadDate +
-                "읽은 쪽 수: " + pagesRead +
-                "전체 쪽 수: " + totalPages +
-                "진행률: " + progress
-                ;
-    }
 }

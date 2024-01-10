@@ -1,7 +1,7 @@
-package view;
+package org.example.view;
 
-import controller.BookController;
-import model.BookModel;
+import org.example.controller.BookController;
+import org.example.model.BookModel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
