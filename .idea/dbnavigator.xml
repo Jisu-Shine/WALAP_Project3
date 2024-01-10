@@ -12,10 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="b3bb0d60-58e4-479c-b0c4-bc5aa97a6f77">
-      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[create table book (
-
-);]]></console>
+    <connection id="01cd3836-b277-41cf-be65-6a5b05e331b5">
+      <console name="Connection 1" type="STANDARD" schema="book" session="Main"><![CDATA[CREATE TABLE book (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(255), department VARCHAR(255), position VARCHAR(255), join_date DATE);]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -23,11 +21,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="b3bb0d60-58e4-479c-b0c4-bc5aa97a6f77" object-ref="consoles/Connection" />
+      <object connection-id="01cd3836-b277-41cf-be65-6a5b05e331b5" object-ref="consoles/Connection 1" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="b3bb0d60-58e4-479c-b0c4-bc5aa97a6f77" />
+    <connection id="01cd3836-b277-41cf-be65-6a5b05e331b5">
+      <session name="Session 1" id="e1b8e5b2-e8b5-4bc4-82e4-430c17cba5e4" />
+    </connection>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -44,11 +44,16 @@
     <last-used-operator value="EQUAL" />
     <filters />
   </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="false">
+    <recently-used-interfaces>
+      <mapping database-type="SQLITE" interface-id="DEFAULT" />
+    </recently-used-interfaces>
+  </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="b3bb0d60-58e4-479c-b0c4-bc5aa97a6f77" active="true" signed="true">
+      <connection id="01cd3836-b277-41cf-be65-6a5b05e331b5" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="Connection 1" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
@@ -63,7 +68,7 @@
           <tns-folder value="" />
           <tns-profile value="" />
           <files>
-            <file path="$PROJECT_DIR$/book.db" schema="main" />
+            <file path="$PROJECT_DIR$/book.db" schema="book" />
           </files>
           <type value="NONE" />
           <user value="" />
@@ -93,7 +98,7 @@
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="true" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="false" />
           <environment-type value="default" />
