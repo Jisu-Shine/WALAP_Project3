@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class SQLiteManager {
 
     private static final String DB_CLASS = "org.sqlite.JDBC";
-    private static final String DB_URL = "jdbc:sqlite:your_database.db";
+    private static final String DB_URL = "jdbc:sqlite:book.db";
 
     private static Connection connection;
 
