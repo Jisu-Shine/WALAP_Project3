@@ -54,7 +54,7 @@ public class BookController {
 
     // 도서명으로 도서 찾기
     public BookModel findBookByTitle(String title) {
-        return dqlService.getBookByTitle(title);
+        return dqlService.getBookByTitle(title).stream().findFirst().orElse(null);
     }
 
     // 도서 책갈피
