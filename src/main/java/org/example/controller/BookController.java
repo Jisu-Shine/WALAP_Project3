@@ -59,7 +59,7 @@ public class BookController {
 
     // 도서 책갈피
     public void saveBookPage(String title, String lastReadDate, int pagesRead) {
-        BookModel book = dqlService.getBookByTitle(title);
+        BookModel book = dqlService.getBookByTitle(title).stream().findFirst().orElse(null);
 
         if (book != null) {
             if (lastReadDate != null && !lastReadDate.isEmpty()) {
@@ -78,7 +78,7 @@ public class BookController {
 
     // 도서 삭제하기
     public void deleteBook(String title) {
-        BookModel book = dqlService.getBookByTitle(title);
+        BookModel book = dqlService.getBookByTitle(title).stream().findFirst().orElse(null);
 
         if (book != null) {
             dmlService.deleteBook(title);
@@ -90,7 +90,7 @@ public class BookController {
 
     // 도서 검색하기 (예시: 제목으로 도서 검색)
     public List<BookModel> searchBook(String searchString) {
-        return dqlService.searchBooks(searchString);
+        return dqlService.getBooksContainingTitle(searchString);
     }
 
     // 진행률로 정렬하기
