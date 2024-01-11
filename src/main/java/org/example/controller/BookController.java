@@ -2,19 +2,30 @@ package org.example.controller;
 
 import org.example.database.BookDQL;
 import org.example.database.BookDML;
+import org.example.database.SQLiteManager;
 import org.example.model.BookModel;
+import java.sql.Connection;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookController {
     private final BookDML dmlService;
     private final BookDQL dqlService;
+    public BookController() {
+        Connection connection;
+        try {
+            connection = SQLiteManager.getConnection();
+        } catch (SQLException e) {
+            System.err.println("Failed to establish database connection: " + e.getMessage());
+            throw new RuntimeException("Failed to establish database connection", e);
+        }
 
-    public BookController(BookDML dmlService, BookDQL dqlService) {
-        this.dmlService = dmlService;
-        this.dqlService = dqlService;
+        this.dmlService = new BookDML(connection);
+        this.dqlService = new BookDQL(connection);
     }
+
 
     // 도서 추가
     public void addBook(String title, String author, String startDate, int totalPages) {
