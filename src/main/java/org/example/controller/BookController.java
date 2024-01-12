@@ -105,7 +105,7 @@ public class BookController {
     }
 
     // 진행률로 정렬하기
-    public List<BookModel> sortByProgress() {
-        return dqlService.sortBooksByProgress();
+    public ArrayList<BookModel> sortByProgress() {
+        return new ArrayList<>(dqlService.sortBooksByProgress());
     }
 }

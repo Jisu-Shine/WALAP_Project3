@@ -23,11 +23,11 @@ public class BookDQL {
                 BookModel book = new BookModel(
                         resultSet.getString("title"),
                         resultSet.getString("author"),
-                        resultSet.getString("start_date"),
-                        resultSet.getInt("total_pages")
+                        resultSet.getString("startDate"),
+                        resultSet.getInt("totalPages")
                 );
-                book.setLastReadDate(resultSet.getString("last_read_date"));
-                book.setPagesRead(resultSet.getInt("pages_read"));
+                book.setLastReadDate(resultSet.getString("lastReadDate"));
+                book.setPagesRead(resultSet.getInt("pagesRead"));
                 book.setProgress(resultSet.getDouble("progress"));
                 books.add(book);
             }
@@ -49,11 +49,11 @@ public class BookDQL {
                 BookModel book = new BookModel(
                         resultSet.getString("title"),
                         resultSet.getString("author"),
-                        resultSet.getString("start_date"),
-                        resultSet.getInt("total_pages")
+                        resultSet.getString("startDate"),
+                        resultSet.getInt("totalPages")
                 );
-                book.setLastReadDate(resultSet.getString("last_read_date"));
-                book.setPagesRead(resultSet.getInt("pages_read"));
+                book.setLastReadDate(resultSet.getString("lastReadDate"));
+                book.setPagesRead(resultSet.getInt("pagesRead"));
                 book.setProgress(resultSet.getDouble("progress"));
                 books.add(book);
             }
@@ -76,11 +76,11 @@ public class BookDQL {
                 BookModel book = new BookModel(
                         resultSet.getString("title"),
                         resultSet.getString("author"),
-                        resultSet.getString("start_date"),
-                        resultSet.getInt("total_pages")
+                        resultSet.getString("startDate"),
+                        resultSet.getInt("totalPages")
                 );
-                book.setLastReadDate(resultSet.getString("last_read_date"));
-                book.setPagesRead(resultSet.getInt("pages_read"));
+                book.setLastReadDate(resultSet.getString("lastReadDate"));
+                book.setPagesRead(resultSet.getInt("pagesRead"));
                 book.setProgress(resultSet.getDouble("progress"));
                 books.add(book);
             }
@@ -103,11 +103,11 @@ public class BookDQL {
                 BookModel book = new BookModel(
                         resultSet.getString("title"),
                         resultSet.getString("author"),
-                        resultSet.getString("start_date"),
-                        resultSet.getInt("total_pages")
+                        resultSet.getString("startDate"),
+                        resultSet.getInt("totalPages")
                 );
-                book.setLastReadDate(resultSet.getString("last_read_date"));
-                book.setPagesRead(resultSet.getInt("pages_read"));
+                book.setLastReadDate(resultSet.getString("lastReadDate"));
+                book.setPagesRead(resultSet.getInt("pagesRead"));
                 book.setProgress(resultSet.getDouble("progress"));
                 books.add(book);
             }

@@ -3,8 +3,6 @@ package org.example.view;
 import org.example.controller.BookController;
 import org.example.model.BookModel;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class BookView {

@@ -17,7 +17,7 @@ public class BookDML {
     }
 
     public void insertBook(BookModel book) {
-        String sql = "INSERT INTO Book (title, author, start_date, last_read_date, pages_read, total_pages, progress) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Book (title, author, startDate, lastReadDate, pagesRead, totalPages, progress) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, book.getTitle());
@@ -34,7 +34,7 @@ public class BookDML {
     }
 
     public void updateBook(BookModel book) {
-        String sql = "UPDATE Book SET title = ?, author = ?, start_date = ?, last_read_date = ?, pages_read = ?, total_pages = ?, progress = ? WHERE title = ?";
+        String sql = "UPDATE Book SET title = ?, author = ?, startDate = ?, lastReadDate = ?, pagesRead = ?, totalPages = ?, progress = ? WHERE title = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, book.getTitle());
@@ -72,11 +72,11 @@ public class BookDML {
                 BookModel book = new BookModel(
                         resultSet.getString("title"),
                         resultSet.getString("author"),
-                        resultSet.getString("start_date"),
-                        resultSet.getInt("total_pages")
+                        resultSet.getString("startDate"),
+                        resultSet.getInt("totalPages")
                 );
-                book.setLastReadDate(resultSet.getString("last_read_date"));
-                book.setPagesRead(resultSet.getInt("pages_read"));
+                book.setLastReadDate(resultSet.getString("lastReadDate"));
+                book.setPagesRead(resultSet.getInt("pagesRead"));
                 book.setProgress(resultSet.getDouble("progress"));
                 books.add(book);
             }
